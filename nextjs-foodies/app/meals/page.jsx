@@ -22,7 +22,7 @@ export default function MealsPage() {
           molestias laudantium
         </p>
         <p className={classes.cta}>
-          <Link href="/meals/share">Share Your Favorite Recipe</Link>
+          <Link href="/share">Share Your Favorite Recipe</Link>
         </p>
       </div>
 
