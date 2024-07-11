@@ -4,6 +4,11 @@ import MealsGrid from "@/components/meals/melas-grid";
 import { getMeals } from "@/lib/meals";
 import { Suspense } from "react";
 
+export const metadata = {
+  title: "All Meals",
+  description: "Browse meals",
+};
+
 async function Meals() {
   const meals = await getMeals();
   return <MealsGrid meals={meals} />;
@@ -22,7 +27,7 @@ export default function MealsPage() {
           molestias laudantium
         </p>
         <p className={classes.cta}>
-          <Link href="/share">Share Your Favorite Recipe</Link>
+          <Link href="/meals/share">Share Your Favorite Recipe</Link>
         </p>
       </div>
 

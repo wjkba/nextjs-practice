@@ -58,8 +58,8 @@ export async function saveMeal(meal) {
 }
 
 export async function deleteMealByTitle() {
-  const title = "cxbcvxbvcb";
+  const title = "Salad2";
   const stmt = db.prepare(`DELETE FROM meals WHERE title = ?`);
   const info = stmt.run(title);
-  return info; // This contains information about the operation, including how many rows were deleted.
+  return info;
 }
