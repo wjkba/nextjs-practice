@@ -144,7 +144,13 @@ ul {
 
 #archive-header ul a:hover,
 #archive-header ul a.active {
-  color: #e5e5e1;
+  background-color: #bcbcb7;
+  color: #000000;
+}
+
+.active{
+  background-color: #bcbcb7;
+  color: #000000 !important; 
 }
 
 #archive-filter {
