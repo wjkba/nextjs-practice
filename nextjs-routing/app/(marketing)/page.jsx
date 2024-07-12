@@ -1,18 +1,32 @@
+import logo from "@/assets/logo.jpg";
 import Link from "next/link";
 
 export default function HomePage() {
   return (
     <div id="home">
-      <h1>Next.js Routing & Page Rendering</h1>
-      <h2>HomePage</h2>
+      <img src={logo.src} alt="A newspaper" />
+      <h1>A News Site For The Next Generation</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum,
-        illo qui minima dignissimos ut excepturi. Ea vel a dolor atque illo
-        architecto ratione quisquam voluptatum fugiat? Molestias omnis fugit
-        modi.
+        Next News is here to deliver you all the latest news - concise &
+        unbiased!
       </p>
+
       <p>
-        <Link href={"/news"}>Browse news</Link>
+        NextNews aims to provide you with the latest news in a concise and
+        unbiased manner. We strive to deliver the news in a way that is easy to
+        understand and to the point. We want to keep you informed without
+        overwhelming you with unnecessary information.
+      </p>
+
+      <p>
+        We employ a team of dedicated journalists who are committed to
+        delivering the news in a fair and unbiased manner. Our team is
+        passionate about keeping you informed and up to date with the latest
+        news.
+      </p>
+
+      <p>
+        <Link href="/news">Read the latest news</Link>
       </p>
     </div>
   );
