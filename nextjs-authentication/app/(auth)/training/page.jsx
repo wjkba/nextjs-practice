@@ -1,6 +1,17 @@
-import { getTrainings } from '@/lib/training';
+import { verifyAuth } from "@/lib/auth";
+import { getTrainings } from "@/lib/training";
+import { redirect } from "next/navigation";
 
 export default async function TrainingPage() {
+  // kiedy chcemy sprawdzic czy uzytkownik powinien dostac dostep do strony
+  // to pierwsze co robimy to weryfikacja, zanim fetchujemy jakiekolwiek dane
+  // musimy zweryfikowac cookies
+
+  const result = await verifyAuth();
+  if (!result.user) {
+    return redirect("/");
+  }
+
   const trainingSessions = getTrainings();
 
   return (
